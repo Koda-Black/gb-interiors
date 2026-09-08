@@ -1,3 +1,5 @@
+import SiteHeader from './site-header';
+
 const whatsappBase = 'https://wa.me/2348165006404';
 const whatsapp = `${whatsappBase}?text=${encodeURIComponent("Hello GB Interiors, I'd like to discuss a space.")}`;
 
@@ -39,26 +41,10 @@ export default function Home() {
     <main>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
-      <header className="site-header">
-        <a className="brand" href="#top" aria-label="GB Interiors home">
-          <span className="brand-mark" aria-hidden="true">✦</span>
-          <span>GB INTERIORS</span>
-        </a>
-        <nav className="desktop-nav" aria-label="Primary navigation">
-          <a href="#about">About</a>
-          <a href="#services">Services</a>
-          <a href="#gallery">Projects</a>
-          <a href="#contact">Contact</a>
-        </nav>
-        <a className="menu-link" href={whatsapp} target="_blank" rel="noreferrer">
-          <span>Let&apos;s talk</span>
-          <span className="menu-icon" aria-hidden="true"><i /><i /></span>
-        </a>
-      </header>
+      <SiteHeader />
 
       <section className="hero" id="top">
         <div className="grid-surface" aria-hidden="true" />
-        <div className="hero-orb" aria-hidden="true" />
         <h1>
           <span>Spaces,</span>
           <em>reimagined</em>
@@ -68,7 +54,7 @@ export default function Home() {
           Premium interiors, made-to-measure furniture and meticulous execution for homes, hospitality and business spaces across Nigeria.
         </p>
         <div className="hero-actions">
-          <a className="button button-primary" href="#gallery">Explore our work <span>↗</span></a>
+          <a className="button button-primary" href="/gallery#all-projects">Explore our work <span>↗</span></a>
           <a className="button button-ghost" href="#about">Discover GB</a>
         </div>
         <div className="hero-image-wrap">
@@ -84,7 +70,7 @@ export default function Home() {
         <span>Homes</span><i>✦</i><span>Restaurants</span><i>✦</i><span>Hotels</span><i>✦</i><span>Offices</span><i>✦</i><span>Worship</span><i>✦</i><span>Nationwide</span>
       </section>
 
-      <section className="projects section-pad" id="gallery">
+      <section className="projects section-pad" id="gallery-preview">
         <div className="section-intro reveal">
           <p className="eyebrow">Selected environments</p>
           <h2>Every space,<br /><em>tailored uniquely</em><br />for you.</h2>
@@ -95,7 +81,7 @@ export default function Home() {
         </div>
 
         <div className="project-grid">
-          {projects.map((project, index) => (
+          {projects.slice(0, 3).map((project, index) => (
             <article className={`project-card reveal project-${index + 1}`} key={project.title}>
               <div className="project-image">
                 <img src={project.image} alt={`${project.type} interior — ${project.description}`} loading={index < 2 ? 'eager' : 'lazy'} />
@@ -103,11 +89,15 @@ export default function Home() {
               </div>
               <div className="project-meta">
                 <div><p>{project.type}</p><h3>{project.title}</h3></div>
-                <a href={`${whatsappBase}?text=${encodeURIComponent(`Hello GB Interiors, I am interested in this ${project.type} project.`)}`} target="_blank" rel="noreferrer" aria-label={`Enquire about ${project.title}`}>↗</a>
+                <a href={`${whatsappBase}?text=${encodeURIComponent(`Hello GB Interiors, I would like a design inspired by “${project.title}” (${project.type}) reimagined for my space.\n\n${project.description}\n\nReference image: https://gb-interiors.tzarkprovince.chatgpt.site${project.image}`)}`} target="_blank" rel="noreferrer" aria-label={`Enquire about ${project.title}`}>↗</a>
               </div>
               <p className="project-description">{project.description}</p>
             </article>
           ))}
+        </div>
+        <div className="gallery-cta-row reveal">
+          <p>See the complete collection of residential, hospitality, worship and workplace environments.</p>
+          <a className="button button-primary" href="/gallery">View the full gallery <span>↗</span></a>
         </div>
       </section>
 
@@ -131,10 +121,10 @@ export default function Home() {
             <h3>One team. Every considered detail.</h3>
             <p>We combine creative direction with disciplined project care, selecting premium assets and managing the journey from first sketch to the final cushion.</p>
             <div className="proof-grid">
+              <div><strong>500+</strong><span>Clients served<br />with care</span></div>
               <div><strong>02</strong><span>Home offices<br />Lagos + Benin</span></div>
               <div><strong>NG</strong><span>Projects delivered<br />across Nigeria</span></div>
               <div><strong>01</strong><span>Dedicated team<br />start to finish</span></div>
-              <div><strong>∞</strong><span>Possibilities for<br />every kind of space</span></div>
             </div>
           </aside>
         </div>
