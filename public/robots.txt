@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://gb-interiors.tzarkprovince.chatgpt.site/sitemap.xml
+
