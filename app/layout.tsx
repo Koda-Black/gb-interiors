@@ -6,7 +6,7 @@ const geistSans = Geist({ variable: '--font-geist-sans', subsets: ['latin'] });
 const geistMono = Geist_Mono({ variable: '--font-geist-mono', subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://gb-interiors.tzarkprovince.chatgpt.site'),
+  metadataBase: new URL('https://www.gbinteriors.ng'),
   title: {
     default: 'GB Interiors | Premium Interior Design in Nigeria',
     template: '%s | GB Interiors',
