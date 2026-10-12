@@ -1,4 +1,5 @@
 import SiteHeader from './site-header';
+import BrandLockup from './brand-lockup';
 
 const whatsappBase = 'https://wa.me/2348165006404';
 const whatsapp = `${whatsappBase}?text=${encodeURIComponent("Hello GB Interiors, I'd like to discuss a space.")}`;
@@ -175,7 +176,9 @@ export default function Home() {
           <div><p>Project reach</p><strong>Available across<br />Nigeria</strong></div>
           <div><p>Social</p><span>Instagram — soon</span><span>TikTok — soon</span></div>
         </div>
-        <div className="giant-brand" aria-hidden="true"><span>✦</span> GB INTERIORS</div>
+        <div className="giant-brand" aria-label="GB Interiors — Creating your dream home">
+          <BrandLockup display />
+        </div>
       </section>
 
       <footer>
@@ -190,4 +193,3 @@ export default function Home() {
     </main>
   );
 }
-

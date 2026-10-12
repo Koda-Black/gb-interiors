@@ -1,9 +1,10 @@
 import type { Metadata, Viewport } from 'next';
-import { Geist, Geist_Mono } from 'next/font/google';
+import { Geist, Geist_Mono, Poppins } from 'next/font/google';
 import './globals.css';
 
 const geistSans = Geist({ variable: '--font-geist-sans', subsets: ['latin'] });
 const geistMono = Geist_Mono({ variable: '--font-geist-mono', subsets: ['latin'] });
+const poppins = Poppins({ variable: '--font-brand', subsets: ['latin'], weight: ['500', '600', '700'] });
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.gbinteriors.ng'),
@@ -58,8 +59,7 @@ export const viewport: Viewport = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>{children}</body>
+      <body className={`${geistSans.variable} ${geistMono.variable} ${poppins.variable}`}>{children}</body>
     </html>
   );
 }
-
