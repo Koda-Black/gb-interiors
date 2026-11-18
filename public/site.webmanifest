@@ -6,6 +6,6 @@
   "display": "standalone",
   "background_color": "#f7f6f3",
   "theme_color": "#181715",
-  "icons": [{ "src": "/icon.svg", "sizes": "any", "type": "image/svg+xml" }]
+  "icons": [{ "src": "/gb-interiors-logo.jpg", "sizes": "1536x1024", "type": "image/jpeg" }]
 }
 

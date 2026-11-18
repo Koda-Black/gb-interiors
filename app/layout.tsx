@@ -31,6 +31,11 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: '/' },
   manifest: '/site.webmanifest',
+  icons: {
+    icon: [{ url: '/gb-interiors-logo.jpg', type: 'image/jpeg' }],
+    shortcut: ['/gb-interiors-logo.jpg'],
+    apple: [{ url: '/gb-interiors-logo.jpg', type: 'image/jpeg' }],
+  },
   openGraph: {
     type: 'website',
     locale: 'en_NG',
