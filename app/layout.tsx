@@ -32,9 +32,9 @@ export const metadata: Metadata = {
   alternates: { canonical: '/' },
   manifest: '/site.webmanifest',
   icons: {
-    icon: [{ url: '/gb-interiors-logo.jpg', type: 'image/jpeg' }],
-    shortcut: ['/gb-interiors-logo.jpg'],
-    apple: [{ url: '/gb-interiors-logo.jpg', type: 'image/jpeg' }],
+    icon: [{ url: '/gb-interiors-logo.png', type: 'image/png' }],
+    shortcut: ['/gb-interiors-logo.png'],
+    apple: [{ url: '/gb-interiors-logo.png', type: 'image/png' }],
   },
   openGraph: {
     type: 'website',
